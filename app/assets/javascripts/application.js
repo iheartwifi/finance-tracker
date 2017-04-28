@@ -1,3 +1,7 @@
+/* global $ */
+/* global show_spinner */
+/* global hide_spinner */
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -15,3 +19,11 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+var hide_spinner = function(){
+  $('#spinner').hide();
+}
+
+var show_spinner = function(){
+    $('#spinner').show();
+}
