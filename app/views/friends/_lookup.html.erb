@@ -17,10 +17,11 @@
   <%= render 'common/spinner' %>
   <% if @users %>
     <% if @users.size > 0 %>
+    <h3>Search Results</h3>
       <div id="friend-lookup-results" class="well results-block col-md-10">
         <table class="search-results-table col-md-12">
           <tbody>
-            <% users.each do |user| %>
+            <% @users.each do |user| %>
             <tr>
               <td><strong>Name: </strong> <%= user.full_name %></td>
               <td><strong>Email: </strong> <%= user.email %></td>
@@ -32,11 +33,11 @@
                   <% else %>
                       <span class='label lable-primary'>You are friends</span>
                   <% end %>
+              </td>
             </tr>
       <% end %>
          </tbody>
         </table>
-        
       </div>
     <% else %>
       <p class="lead col-md-12">No people match this search criteria</p>
